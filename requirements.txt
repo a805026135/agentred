@@ -9,5 +9,8 @@ pyyaml>=6.0
 # Optional: For advisor (any LLM with OpenAI-compatible API)
 # No extra deps needed - uses urllib/requests built-in
 
+# Optional: For Web UI
+flask>=3.0.0
+
 # Optional: For enhanced reporting
 # matplotlib>=3.7.0  # for radar chart generation
