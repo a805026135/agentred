@@ -39,3 +39,6 @@ desktop.ini
 # Logs
 *.log
 logs/
+
+# Web UI uploads (temporary)
+web/uploads/
