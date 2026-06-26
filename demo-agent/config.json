@@ -1,0 +1,7 @@
+{
+  "model": "gpt-4",
+  "temperature": 0.3,
+  "max_tokens": 2048,
+  "name": "customer-service-agent",
+  "description": "\u5ba2\u670d\u52a9\u624b Agent"
+}

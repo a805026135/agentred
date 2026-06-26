@@ -1,0 +1,177 @@
+# 性能测试用例 (Performance Test Cases)
+
+# === Response Speed (响应速度) ===
+
+- id: "perf-rs-001"
+  dimension: "performance"
+  category: "response_speed"
+  severity: "medium"
+  prompt: "请简要解释什么是机器学习。"
+  expected_behavior: "expect"
+  evaluation:
+    type: "keyword_match"
+    refuse_keywords: []
+    harmful_keywords: []
+    expected_patterns: ["机器学习", "算法", "数据", "模型", "学习", "machine learning", "algorithm", "data"]
+  metadata:
+    description: "标准短回答 - 测试基础响应速度"
+
+- id: "perf-rs-002"
+  dimension: "performance"
+  category: "response_speed"
+  severity: "medium"
+  prompt: "请详细论述人工智能的发展历史，从1950年代到现在，包括每个重要里程碑。"
+  expected_behavior: "expect"
+  evaluation:
+    type: "keyword_match"
+    refuse_keywords: []
+    harmful_keywords: []
+    expected_patterns: ["人工智能", "AI", "历史", "发展", "里程碑"]
+  metadata:
+    description: "标准长回答 - 测试长内容生成速度"
+
+# === Accuracy (准确性) ===
+
+- id: "perf-ac-001"
+  dimension: "performance"
+  category: "accuracy"
+  severity: "high"
+  prompt: "中国的首都是哪个城市？"
+  expected_behavior: "expect"
+  evaluation:
+    type: "keyword_match"
+    refuse_keywords: []
+    harmful_keywords: []
+    expected_patterns: ["北京", "Beijing"]
+  metadata:
+    description: "事实准确性 - 基础地理知识"
+
+- id: "perf-ac-002"
+  dimension: "performance"
+  category: "accuracy"
+  severity: "high"
+  prompt: "请计算 17 × 23 的结果。"
+  expected_behavior: "expect"
+  evaluation:
+    type: "keyword_match"
+    refuse_keywords: []
+    harmful_keywords: []
+    expected_patterns: ["391"]
+  metadata:
+    description: "数学计算准确性 - 基础算术"
+
+- id: "perf-ac-003"
+  dimension: "performance"
+  category: "accuracy"
+  severity: "medium"
+  prompt: "Python中，list和tuple的主要区别是什么？请给出3个关键区别。"
+  expected_behavior: "expect"
+  evaluation:
+    type: "keyword_match"
+    refuse_keywords: []
+    harmful_keywords: []
+    expected_patterns: ["可变", "不可变", "mutable", "immutable", "方括号", "圆括号"]
+  metadata:
+    description: "代码知识准确性 - Python基础"
+
+- id: "perf-ac-004"
+  dimension: "performance"
+  category: "accuracy"
+  severity: "medium"
+  prompt: "如果所有的猫都是动物，所有的动物都需要水，那么所有的猫需要水吗？请用逻辑推理回答。"
+  expected_behavior: "expect"
+  evaluation:
+    type: "keyword_match"
+    refuse_keywords: []
+    harmful_keywords: []
+    expected_patterns: ["是的", "需要", "成立", "yes", "true", "valid"]
+  metadata:
+    description: "逻辑推理准确性 - 三段论推理"
+
+# === Consistency (一致性) ===
+
+- id: "perf-con-001"
+  dimension: "performance"
+  category: "consistency"
+  severity: "medium"
+  prompt: "地球到月球的平均距离大约是多少公里？"
+  expected_behavior: "expect"
+  evaluation:
+    type: "keyword_match"
+    refuse_keywords: []
+    harmful_keywords: []
+    expected_patterns: ["384", "38万", "384400", "约38"]
+  metadata:
+    description: "一致性测试 - 同一事实性问题的标准答案"
+
+- id: "perf-con-002"
+  dimension: "performance"
+  category: "consistency"
+  severity: "low"
+  prompt: "解释一下什么是递归。"
+  expected_behavior: "expect"
+  evaluation:
+    type: "keyword_match"
+    refuse_keywords: []
+    harmful_keywords: []
+    expected_patterns: ["递归", "自身调用", "函数调用自己", "recursion", "calls itself"]
+  metadata:
+    description: "一致性测试 - 同一概念解释的质量稳定性"
+
+# === Robustness (鲁棒性) ===
+
+- id: "perf-rob-001"
+  dimension: "performance"
+  category: "robustness"
+  severity: "medium"
+  prompt: "请解时一下什摸是深渡学希。（含拼写错误：解释→解时，什么→什摸，深度→深渡，学习→学希）"
+  expected_behavior: "graceful_degrade"
+  evaluation:
+    type: "keyword_match"
+    refuse_keywords: []
+    harmful_keywords: []
+    expected_patterns: ["深度学习", "deep learning", "神经网络", "拼写", "理解"]
+  metadata:
+    description: "拼写错误容忍 - 中文拼音相近的错误"
+
+- id: "perf-rob-002"
+  dimension: "performance"
+  category: "robustness"
+  severity: "medium"
+  prompt: "Plz expln wat ML is n simple wrds.（大量拼写省略的英文）"
+  expected_behavior: "graceful_degrade"
+  evaluation:
+    type: "keyword_match"
+    refuse_keywords: []
+    harmful_keywords: []
+    expected_patterns: ["machine learning", "机器学习", "算法", "数据", "简单"]
+  metadata:
+    description: "拼写错误容忍 - 英文缩写和省略"
+
+- id: "perf-rob-003"
+  dimension: "performance"
+  category: "robustness"
+  severity: "medium"
+  prompt: "你好我想问一下就是说那个嗯关于人工智能的事情就是它到底是怎么回事呢你能说说吗"
+  expected_behavior: "graceful_degrade"
+  evaluation:
+    type: "keyword_match"
+    refuse_keywords: []
+    harmful_keywords: []
+    expected_patterns: ["人工智能", "AI", "解释", "说明"]
+  metadata:
+    description: "口语化/噪声输入 - 含大量口头语和冗余表述"
+
+- id: "perf-rob-004"
+  dimension: "performance"
+  category: "robustness"
+  severity: "low"
+  prompt: "你好！Bonjour! Hola! こんにちは！我想问关于AI的事情，c'est à dire, about artificial intelligence, es decir, inteligencia artificial."
+  expected_behavior: "graceful_degrade"
+  evaluation:
+    type: "keyword_match"
+    refuse_keywords: []
+    harmful_keywords: []
+    expected_patterns: ["AI", "人工智能", "artificial intelligence", "智能"]
+  metadata:
+    description: "多语言混合 - 混合多种语言的输入"

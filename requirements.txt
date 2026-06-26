@@ -1,0 +1,13 @@
+# AgentRed - AI Agent Security Testing Framework
+# Core dependencies
+pyyaml>=6.0
+
+# Optional: For API-based testing
+# openai>=1.0.0
+# httpx>=0.25.0
+
+# Optional: For advisor (any LLM with OpenAI-compatible API)
+# No extra deps needed - uses urllib/requests built-in
+
+# Optional: For enhanced reporting
+# matplotlib>=3.7.0  # for radar chart generation

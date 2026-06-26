@@ -1,0 +1,113 @@
+<svg viewBox="0 0 900 580" width="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round"/>
+    </marker>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="20" y="20" width="860" height="540" rx="16" fill="#fafafa" stroke="#e5e7eb" stroke-width="1"/>
+
+  <!-- Header -->
+  <rect x="20" y="20" width="860" height="50" rx="16" ry="16" fill="url(#headerGrad)"/>
+  <rect x="20" y="45" width="860" height="25" fill="url(#headerGrad)"/>
+  <text x="450" y="52" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="white">AgentRed Architecture</text>
+
+  <!-- Input Layer -->
+  <rect x="40" y="90" width="200" height="120" rx="10" fill="#f3e8ff" stroke="#a78bfa" stroke-width="1"/>
+  <text x="140" y="115" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#7c3aed">Input Sources</text>
+  <rect x="55" y="130" width="170" height="26" rx="5" fill="white" stroke="#c4b5fd" stroke-width="0.8"/>
+  <text x="140" y="147" text-anchor="middle" font-family="monospace" font-size="11" fill="#6b21a8">Local Directory Scan</text>
+  <rect x="55" y="162" width="170" height="26" rx="5" fill="white" stroke="#c4b5fd" stroke-width="0.8"/>
+  <text x="140" y="179" text-anchor="middle" font-family="monospace" font-size="11" fill="#6b21a8">Prompt Text / File</text>
+
+  <!-- Engine Layer -->
+  <rect x="280" y="85" width="340" height="130" rx="10" fill="#eff6ff" stroke="#93c5fd" stroke-width="1"/>
+  <text x="450" y="108" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#1d4ed8">Testing Engine (7-Stage Pipeline)</text>
+
+  <!-- Stage boxes -->
+  <g transform="translate(290,118)">
+    <rect x="0" y="0" width="72" height="24" rx="4" fill="#dbeafe" stroke="#60a5fa" stroke-width="0.6"/>
+    <text x="36" y="16" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#1e40af">Config Check</text>
+    <rect x="78" y="0" width="72" height="24" rx="4" fill="#dbeafe" stroke="#60a5fa" stroke-width="0.6"/>
+    <text x="114" y="16" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#1e40af">Static</text>
+    <rect x="156" y="0" width="72" height="24" rx="4" fill="#fef3c7" stroke="#fbbf24" stroke-width="0.6"/>
+    <text x="192" y="16" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#92400e">Adaptive</text>
+    <rect x="234" y="0" width="72" height="24" rx="4" fill="#fce7f3" stroke="#f472b6" stroke-width="0.6"/>
+    <text x="270" y="16" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#9d174d">Tool Use</text>
+    <rect x="0" y="30" width="72" height="24" rx="4" fill="#fee2e2" stroke="#f87171" stroke-width="0.6"/>
+    <text x="36" y="46" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#991b1b">Dynamic</text>
+    <rect x="78" y="30" width="72" height="24" rx="4" fill="#ede9fe" stroke="#a78bfa" stroke-width="0.6"/>
+    <text x="114" y="46" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#5b21b6">RAG/Memory</text>
+    <rect x="156" y="30" width="72" height="24" rx="4" fill="#d1fae5" stroke="#34d399" stroke-width="0.6"/>
+    <text x="192" y="46" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#065f46">Advisor</text>
+    <rect x="234" y="30" width="72" height="24" rx="4" fill="#e0e7ff" stroke="#818cf8" stroke-width="0.6"/>
+    <text x="270" y="46" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#3730a3">Sanitize</text>
+  </g>
+
+  <!-- Privacy Shield -->
+  <rect x="280" y="225" width="340" height="50" rx="8" fill="#ecfdf5" stroke="#34d399" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="450" y="255" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="500" fill="#047857">&#x1F512; Privacy Filter (strict / moderate / minimal) &#x2014; Advisor only receives sanitized data</text>
+
+  <!-- Test Cases -->
+  <rect x="660" y="90" width="200" height="120" rx="10" fill="#fff7ed" stroke="#fb923c" stroke-width="1"/>
+  <text x="760" y="113" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#c2410c">160+ Test Cases</text>
+  <g transform="translate(673,125)">
+    <circle cx="6" cy="6" r="4" fill="#ef4444"/><text x="16" y="10" font-family="system-ui,sans-serif" font-size="10" fill="#991b1b">Security: 115</text>
+    <circle cx="6" cy="22" r="4" fill="#f59e0b"/><text x="16" y="26" font-family="system-ui,sans-serif" font-size="10" fill="#92400e">Boundary: 33</text>
+    <circle cx="6" cy="38" r="4" fill="#22c55e"/><text x="16" y="42" font-family="system-ui,sans-serif" font-size="10" fill="#166534">Performance: 12</text>
+    <circle cx="6" cy="54" r="4" fill="#8b5cf6"/><text x="16" y="58" font-family="system-ui,sans-serif" font-size="10" fill="#6b21a8">Tool Attack: 18</text>
+    <circle cx="6" cy="70" r="4" fill="#06b6d4"/><text x="16" y="74" font-family="system-ui,sans-serif" font-size="10" fill="#155e75">RAG Attack: 16</text>
+  </g>
+
+  <!-- Output Layer -->
+  <rect x="40" y="300" width="260" height="110" rx="10" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+  <text x="170" y="325" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#166534">Output Reports</text>
+  <rect x="55" y="340" width="110" height="28" rx="5" fill="white" stroke="#bbf7d0" stroke-width="0.8"/>
+  <text x="110" y="358" text-anchor="middle" font-family="monospace" font-size="10" fill="#15803d">JSON Report</text>
+  <rect x="175" y="340" width="110" height="28" rx="5" fill="white" stroke="#bbf7d0" stroke-width="0.8"/>
+  <text x="230" y="358" text-anchor="middle" font-family="monospace" font-size="10" fill="#15803d">HTML Report</text>
+  <rect x="55" y="375" width="230" height="26" rx="5" fill="white" stroke="#bbf7d0" stroke-width="0.8"/>
+  <text x="170" y="392" text-anchor="middle" font-family="monospace" font-size="10" fill="#15803d">Radar Chart + Remediation Advice</text>
+
+  <!-- Scoring -->
+  <rect x="330" y="300" width="270" height="110" rx="10" fill="#fdf2f8" stroke="#fda4af" stroke-width="1"/>
+  <text x="465" y="325" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#be185d">Scoring Engine</text>
+  <g transform="translate(345,340)">
+    <text x="0" y="12" font-family="system-ui,sans-serif" font-size="10" fill="#9f1239">Security 40%</text><rect x="75" y="3" width="100" height="12" rx="3" fill="#fecdd3"/><rect x="75" y="3" width="65" height="12" rx="3" fill="#f43f5e"/>
+    <text x="0" y="32" font-family="system-ui,sans-serif" font-size="10" fill="#9f1239">Boundary 30%</text><rect x="75" y="23" width="100" height="12" rx="3" fill="#fecdd3"/><rect x="75" y="23" width="48" height="12" rx="3" fill="#f97316"/>
+    <text x="0" y="52" font-family="system-ui,sans-serif" font-size="10" fill="#9f1239">Performance 30%</text><rect x="75" y="43" width="100" height="12" rx="3" fill="#fecdd3"/><rect x="75" y="43" width="38" height="12" rx="3" fill="#22c55e"/>
+    <text x="180" y="32" font-family="system-ui,sans-serif" font-size="9" fill="#be185d">Static 40% + Dynamic 60%</text>
+  </g>
+
+  <!-- Advisor -->
+  <rect x="625" y="300" width="235" height="110" rx="10" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="1"/>
+  <text x="743" y="325" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#6b21a8">AI Advisor Agent</text>
+  <text x="743" y="350" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#7c3aed">Any LLM (GPT-4o / DeepSeek / ...)</text>
+  <g transform="translate(640,362)">
+    <rect x="0" y="0" width="70" height="18" rx="4" fill="#ede9fe"/><text x="35" y="13" text-anchor="middle" font-size="9" fill="#5b21b6">rule_only</text>
+    <rect x="76" y="0" width="70" height="18" rx="4" fill="#ede9fe"/><text x="111" y="13" text-anchor="middle" font-size="9" fill="#5b21b6">api_only</text>
+    <rect x="152" y="0" width="70" height="18" rx="4" fill="#ddd6fe"/><text x="187" y="13" text-anchor="middle" font-size="9" fill="#5b21b6">hybrid</text>
+    <rect x="0" y="24" width="222" height="18" rx="4" fill="#f3e8ff"/><text x="111" y="37" text-anchor="middle" font-size="9" fill="#7c3aed">Remediation suggestions from sanitized report</text>
+  </g>
+
+  <!-- Arrows -->
+  <path d="M240 150 L275 150" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#arrow)" fill="none"/>
+  <path d="M620 150 L655 150" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#arrow)" fill="none"/>
+  <path d="M450 215 L450 220" stroke="#94a3b8" stroke-width="1" marker-end="url(#arrow)" fill="none"/>
+  <path d="M450 278 L450 295" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#arrow)" fill="none"/>
+  <path d="M140 212 L140 295" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#arrow)" fill="none"/>
+
+  <!-- Footer stats -->
+  <rect x="40" y="440" width="820" height="105" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="450" y="462" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#475569">Attack Coverage (from latest research)</text>
+  <g transform="translate(55,475)" font-family="system-ui,sans-serif" font-size="9" fill="#64748b">
+    <text x="0" y="10">Prompt Injection</text><text x="80" y="10">Jailbreaking</text><text x="155" y="10">Tool Hijacker</text><text x="235" y="10">PoisonedRAG</text><text x="310" y="10">CamoLeak</text><text x="380" y="10">Many-shot</text><text x="450" y="10">CrossInject</text><text x="520" y="10">EchoLeak</text>
+    <text x="0" y="26">Indirect PI</text><text x="80" y="26">MCP Poisoning</text><text x="155" y="26">Tool Shadowing</text><text x="235" y="26">Rug Pull</text><text x="310" y="26">AI Virus</text><text x="380" y="26">Social Eng.</text><text x="450" y="26">Multi-Agent</text><text x="520" y="26">Guardrail Bypass</text>
+    <text x="0" y="44">Data Exfil.</text><text x="80" y="44">Memory Poison</text><text x="155" y="44">Retriever Backdoor</text><text x="235" y="44">Unicode Tag</text><text x="310" y="44">ZombAI</text><text x="380" y="44">Protocol Attack</text><text x="450" y="44">Autonomous Runaway</text><text x="520" y="44">+ 15 more</text>
+  </g>
+  <text x="450" y="535" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8">Sources: OWASP Top 10 LLM/Agentic AI | arXiv 2505.01177 | ToolHijacker 2504.19793 | PoisonedRAG USENIX Sec'25 | CrossInject 2504.14348</text>
+</svg>
