@@ -7,6 +7,8 @@
 </h1>
 
 <p align="center">
+  <strong>English</strong> | <a href="README_zh.md">中文</a>
+  <br><br>
   <strong>AI Agent security testing framework with 160+ attack cases from latest research.</strong>
   <br><br>
   <a href="#quick-start"><strong>Quick Start</strong></a> &bull;
